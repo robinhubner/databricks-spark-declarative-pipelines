@@ -39,16 +39,16 @@ class WorkshopHelper:
     def __init__(self):
         self.username = username
         self.clean_username = clean_username
-        self.catalog_name = f"sdp_workshop_{clean_username}"  # Catalog with username
-        self.default_schema = "default"  # For volume storage
+        self.catalog_name = "sdp_workshop"  # Enter catalog name
+        self.default_schema = f"{clean_username}_default"  # For volume storage
         
         # Define paths
         self.working_dir = f"/Volumes/{self.catalog_name}/{self.default_schema}/raw"
         
         # Schema names - simple medallion architecture
-        self.bronze_schema = "bronze"
-        self.silver_schema = "silver"
-        self.gold_schema = "gold"
+        self.bronze_schema = f"{clean_username}_bronze"
+        self.silver_schema = f"{clean_username}_silver"
+        self.gold_schema = f"{clean_username}_gold"
     
     def print_config(self):
         print(f"""
