@@ -421,7 +421,7 @@
 -- MAGIC # Clean username for use in naming (remove special characters)
 -- MAGIC clean_username = re.sub(r'[^a-z0-9]', '_', username.lower())
 -- MAGIC
--- MAGIC working_dir = f'/Volumes/sdp_workshop_{clean_username}/default/raw'
+-- MAGIC working_dir = f'/Volumes/xxx/{clean_username}_default/raw'
 -- MAGIC
 -- MAGIC result = add_orders_file(spark, working_dir, file_number=1, num_orders=25)
 -- MAGIC print(result)
